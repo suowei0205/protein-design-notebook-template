@@ -1,0 +1,4758 @@
+{
+  "schema": "synthetic-top10-demo-v1",
+  "synthetic": true,
+  "note": "SYNTHETIC DEMO: fictional sequence, coordinates and metrics; no scientific inference.",
+  "branch": "SYNTHETIC_DEMO",
+  "run_id": "SYNTHETIC-DEMO-NO-RUN",
+  "af3_naming": {
+    "protein": "demo-protein",
+    "region": "demo-region",
+    "helix": "A-helix",
+    "uniprot": "DEMO-NO-UNIPROT",
+    "residue_range": [
+      1,
+      11
+    ],
+    "mode": "binder",
+    "synthetic": true
+  },
+  "target": {
+    "sequence": "AGSVLTNDKEF",
+    "canonical_range": null,
+    "source": "CPU toy fixture"
+  },
+  "source_archive": {
+    "filename": "SYNTHETIC-formulas-only",
+    "sha256": "NOT_APPLICABLE_NO_SOURCE_ARCHIVE"
+  },
+  "counts": {
+    "actual_models": 80
+  },
+  "main": [
+    {
+      "design_index": 0,
+      "candidate_id": "main:SYNTHETIC-D00:C0:P0:K0:S0:M0",
+      "ranking_score": 0.82,
+      "rank": 1
+    },
+    {
+      "design_index": 1,
+      "candidate_id": "main:SYNTHETIC-D01:C0:P0:K0:S0:M0",
+      "ranking_score": 0.811,
+      "rank": 2
+    },
+    {
+      "design_index": 2,
+      "candidate_id": "main:SYNTHETIC-D02:C0:P0:K0:S0:M0",
+      "ranking_score": 0.802,
+      "rank": 3
+    },
+    {
+      "design_index": 3,
+      "candidate_id": "main:SYNTHETIC-D03:C0:P0:K0:S0:M0",
+      "ranking_score": 0.793,
+      "rank": 4
+    },
+    {
+      "design_index": 4,
+      "candidate_id": "main:SYNTHETIC-D04:C0:P0:K0:S0:M0",
+      "ranking_score": 0.784,
+      "rank": 5
+    },
+    {
+      "design_index": 5,
+      "candidate_id": "main:SYNTHETIC-D05:C0:P0:K0:S0:M0",
+      "ranking_score": 0.775,
+      "rank": 6
+    },
+    {
+      "design_index": 6,
+      "candidate_id": "main:SYNTHETIC-D06:C0:P0:K0:S0:M0",
+      "ranking_score": 0.766,
+      "rank": 7
+    },
+    {
+      "design_index": 7,
+      "candidate_id": "main:SYNTHETIC-D07:C0:P0:K0:S0:M0",
+      "ranking_score": 0.757,
+      "rank": 8
+    },
+    {
+      "design_index": 8,
+      "candidate_id": "main:SYNTHETIC-D08:C0:P0:K0:S0:M0",
+      "ranking_score": 0.748,
+      "rank": 9
+    },
+    {
+      "design_index": 9,
+      "candidate_id": "main:SYNTHETIC-D09:C0:P0:K0:S0:M0",
+      "ranking_score": 0.739,
+      "rank": 10
+    }
+  ],
+  "best": [
+    {
+      "design_index": 1,
+      "candidate_id": "refine:SYNTHETIC-D01:C1:P0:K0:S0:M0",
+      "ranking_score": 0.856,
+      "rank": 1
+    },
+    {
+      "design_index": 2,
+      "candidate_id": "refine:SYNTHETIC-D02:C1:P0:K0:S0:M0",
+      "ranking_score": 0.847,
+      "rank": 2
+    },
+    {
+      "design_index": 4,
+      "candidate_id": "refine:SYNTHETIC-D04:C1:P0:K0:S0:M0",
+      "ranking_score": 0.829,
+      "rank": 3
+    },
+    {
+      "design_index": 0,
+      "candidate_id": "main:SYNTHETIC-D00:C0:P0:K0:S0:M0",
+      "ranking_score": 0.82,
+      "rank": 4
+    },
+    {
+      "design_index": 5,
+      "candidate_id": "refine:SYNTHETIC-D05:C1:P0:K0:S0:M0",
+      "ranking_score": 0.82,
+      "rank": 5
+    },
+    {
+      "design_index": 7,
+      "candidate_id": "refine:SYNTHETIC-D07:C1:P0:K0:S0:M0",
+      "ranking_score": 0.802,
+      "rank": 6
+    },
+    {
+      "design_index": 3,
+      "candidate_id": "main:SYNTHETIC-D03:C0:P0:K0:S0:M0",
+      "ranking_score": 0.793,
+      "rank": 7
+    },
+    {
+      "design_index": 8,
+      "candidate_id": "refine:SYNTHETIC-D08:C1:P0:K0:S0:M0",
+      "ranking_score": 0.793,
+      "rank": 8
+    },
+    {
+      "design_index": 6,
+      "candidate_id": "main:SYNTHETIC-D06:C0:P0:K0:S0:M0",
+      "ranking_score": 0.766,
+      "rank": 9
+    },
+    {
+      "design_index": 9,
+      "candidate_id": "main:SYNTHETIC-D09:C0:P0:K0:S0:M0",
+      "ranking_score": 0.739,
+      "rank": 10
+    }
+  ],
+  "nodes": [
+    {
+      "pair_id": "SYNTHETIC-D00-C0-P0-K0-S0",
+      "design_index": 0,
+      "round": 0,
+      "path": "C0P0K0",
+      "baseline": true,
+      "selected": true,
+      "sequence": "AEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVT",
+      "models": [
+        {
+          "id": "main:SYNTHETIC-D00:C0:P0:K0:S0:M0",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.82,
+            "iptm": 0.65,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D00-C0-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D00-C0-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "main:SYNTHETIC-D00:C0:P0:K0:S0:M1",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.818,
+            "iptm": 0.65,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D00-C0-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D00-C0-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "main:SYNTHETIC-D00:C0:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D00-C0-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D00-C0-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D00-C0-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D00-C1-P0-K0-S0",
+      "design_index": 0,
+      "round": 1,
+      "path": "C1P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "AEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVT",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D00:C1:P0:K0:S0:M0",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.82,
+            "iptm": 0.65,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D00-C1-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D00-C1-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D00:C1:P0:K0:S0:M1",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.818,
+            "iptm": 0.65,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D00-C1-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D00-C1-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D00:C1:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D00-C1-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D00-C1-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D00-C1-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D00-C2-P0-K0-S0",
+      "design_index": 0,
+      "round": 2,
+      "path": "C2P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "AEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVT",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D00:C2:P0:K0:S0:M0",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.82,
+            "iptm": 0.65,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D00-C2-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D00-C2-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D00:C2:P0:K0:S0:M1",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.818,
+            "iptm": 0.65,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D00-C2-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D00-C2-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D00:C2:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D00-C2-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D00-C2-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D00-C2-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D00-C3-P0-K0-S0",
+      "design_index": 0,
+      "round": 3,
+      "path": "C3P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "AEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVT",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D00:C3:P0:K0:S0:M0",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.82,
+            "iptm": 0.65,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D00-C3-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D00-C3-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D00:C3:P0:K0:S0:M1",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.818,
+            "iptm": 0.65,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D00-C3-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D00-C3-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D00:C3:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D00-C3-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D00-C3-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D00-C3-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D01-C0-P0-K0-S0",
+      "design_index": 1,
+      "round": 0,
+      "path": "C0P0K0",
+      "baseline": true,
+      "selected": false,
+      "sequence": "EKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTA",
+      "models": [
+        {
+          "id": "main:SYNTHETIC-D01:C0:P0:K0:S0:M0",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.811,
+            "iptm": 0.658,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D01-C0-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D01-C0-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "main:SYNTHETIC-D01:C0:P0:K0:S0:M1",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.809,
+            "iptm": 0.658,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D01-C0-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D01-C0-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "main:SYNTHETIC-D01:C0:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D01-C0-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D01-C0-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D01-C0-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D01-C1-P0-K0-S0",
+      "design_index": 1,
+      "round": 1,
+      "path": "C1P0K0",
+      "baseline": false,
+      "selected": true,
+      "sequence": "EKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTA",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D01:C1:P0:K0:S0:M0",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.856,
+            "iptm": 0.658,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D01-C1-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D01-C1-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D01:C1:P0:K0:S0:M1",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.854,
+            "iptm": 0.658,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D01-C1-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D01-C1-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D01:C1:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D01-C1-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D01-C1-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D01-C1-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D01-C2-P0-K0-S0",
+      "design_index": 1,
+      "round": 2,
+      "path": "C2P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "EKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTA",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D01:C2:P0:K0:S0:M0",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.841,
+            "iptm": 0.658,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D01-C2-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D01-C2-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D01:C2:P0:K0:S0:M1",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.839,
+            "iptm": 0.658,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D01-C2-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D01-C2-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D01:C2:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D01-C2-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D01-C2-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D01-C2-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D01-C3-P0-K0-S0",
+      "design_index": 1,
+      "round": 3,
+      "path": "C3P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "EKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTA",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D01:C3:P0:K0:S0:M0",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.831,
+            "iptm": 0.658,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D01-C3-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D01-C3-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D01:C3:P0:K0:S0:M1",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.829,
+            "iptm": 0.658,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D01-C3-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D01-C3-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D01:C3:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D01-C3-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D01-C3-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D01-C3-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D02-C0-P0-K0-S0",
+      "design_index": 2,
+      "round": 0,
+      "path": "C0P0K0",
+      "baseline": true,
+      "selected": false,
+      "sequence": "KLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAE",
+      "models": [
+        {
+          "id": "main:SYNTHETIC-D02:C0:P0:K0:S0:M0",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.802,
+            "iptm": 0.666,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D02-C0-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D02-C0-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "main:SYNTHETIC-D02:C0:P0:K0:S0:M1",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.8,
+            "iptm": 0.666,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D02-C0-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D02-C0-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "main:SYNTHETIC-D02:C0:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D02-C0-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D02-C0-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D02-C0-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D02-C1-P0-K0-S0",
+      "design_index": 2,
+      "round": 1,
+      "path": "C1P0K0",
+      "baseline": false,
+      "selected": true,
+      "sequence": "KLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAE",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D02:C1:P0:K0:S0:M0",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.847,
+            "iptm": 0.666,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D02-C1-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D02-C1-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D02:C1:P0:K0:S0:M1",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.845,
+            "iptm": 0.666,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D02-C1-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D02-C1-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D02:C1:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D02-C1-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D02-C1-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D02-C1-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D02-C2-P0-K0-S0",
+      "design_index": 2,
+      "round": 2,
+      "path": "C2P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "KLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAE",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D02:C2:P0:K0:S0:M0",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.832,
+            "iptm": 0.666,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D02-C2-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D02-C2-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D02:C2:P0:K0:S0:M1",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.83,
+            "iptm": 0.666,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D02-C2-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D02-C2-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D02:C2:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D02-C2-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D02-C2-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D02-C2-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D02-C3-P0-K0-S0",
+      "design_index": 2,
+      "round": 3,
+      "path": "C3P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "KLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAE",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D02:C3:P0:K0:S0:M0",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.822,
+            "iptm": 0.666,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D02-C3-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D02-C3-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D02:C3:P0:K0:S0:M1",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.82,
+            "iptm": 0.666,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D02-C3-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D02-C3-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D02:C3:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D02-C3-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D02-C3-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D02-C3-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D03-C0-P0-K0-S0",
+      "design_index": 3,
+      "round": 0,
+      "path": "C0P0K0",
+      "baseline": true,
+      "selected": true,
+      "sequence": "LGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEK",
+      "models": [
+        {
+          "id": "main:SYNTHETIC-D03:C0:P0:K0:S0:M0",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.793,
+            "iptm": 0.674,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D03-C0-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D03-C0-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "main:SYNTHETIC-D03:C0:P0:K0:S0:M1",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.791,
+            "iptm": 0.674,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D03-C0-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D03-C0-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "main:SYNTHETIC-D03:C0:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D03-C0-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D03-C0-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D03-C0-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D03-C1-P0-K0-S0",
+      "design_index": 3,
+      "round": 1,
+      "path": "C1P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "LGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEK",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D03:C1:P0:K0:S0:M0",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.793,
+            "iptm": 0.674,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D03-C1-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D03-C1-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D03:C1:P0:K0:S0:M1",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.791,
+            "iptm": 0.674,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D03-C1-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D03-C1-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D03:C1:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D03-C1-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D03-C1-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D03-C1-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D03-C2-P0-K0-S0",
+      "design_index": 3,
+      "round": 2,
+      "path": "C2P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "LGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEK",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D03:C2:P0:K0:S0:M0",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.793,
+            "iptm": 0.674,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D03-C2-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D03-C2-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D03:C2:P0:K0:S0:M1",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.791,
+            "iptm": 0.674,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D03-C2-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D03-C2-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D03:C2:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D03-C2-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D03-C2-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D03-C2-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D03-C3-P0-K0-S0",
+      "design_index": 3,
+      "round": 3,
+      "path": "C3P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "LGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEK",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D03:C3:P0:K0:S0:M0",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.793,
+            "iptm": 0.674,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D03-C3-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D03-C3-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D03:C3:P0:K0:S0:M1",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.791,
+            "iptm": 0.674,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D03-C3-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D03-C3-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D03:C3:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D03-C3-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D03-C3-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D03-C3-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D04-C0-P0-K0-S0",
+      "design_index": 4,
+      "round": 0,
+      "path": "C0P0K0",
+      "baseline": true,
+      "selected": false,
+      "sequence": "GSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKL",
+      "models": [
+        {
+          "id": "main:SYNTHETIC-D04:C0:P0:K0:S0:M0",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.784,
+            "iptm": 0.682,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D04-C0-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D04-C0-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "main:SYNTHETIC-D04:C0:P0:K0:S0:M1",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.782,
+            "iptm": 0.682,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D04-C0-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D04-C0-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "main:SYNTHETIC-D04:C0:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D04-C0-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D04-C0-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D04-C0-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D04-C1-P0-K0-S0",
+      "design_index": 4,
+      "round": 1,
+      "path": "C1P0K0",
+      "baseline": false,
+      "selected": true,
+      "sequence": "GSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKL",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D04:C1:P0:K0:S0:M0",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.829,
+            "iptm": 0.682,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D04-C1-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D04-C1-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D04:C1:P0:K0:S0:M1",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.827,
+            "iptm": 0.682,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D04-C1-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D04-C1-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D04:C1:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D04-C1-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D04-C1-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D04-C1-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D04-C2-P0-K0-S0",
+      "design_index": 4,
+      "round": 2,
+      "path": "C2P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "GSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKL",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D04:C2:P0:K0:S0:M0",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.814,
+            "iptm": 0.682,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D04-C2-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D04-C2-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D04:C2:P0:K0:S0:M1",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.812,
+            "iptm": 0.682,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D04-C2-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D04-C2-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D04:C2:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D04-C2-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D04-C2-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D04-C2-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D04-C3-P0-K0-S0",
+      "design_index": 4,
+      "round": 3,
+      "path": "C3P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "GSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKL",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D04:C3:P0:K0:S0:M0",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.804,
+            "iptm": 0.682,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D04-C3-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D04-C3-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D04:C3:P0:K0:S0:M1",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.802,
+            "iptm": 0.682,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D04-C3-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D04-C3-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D04:C3:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D04-C3-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D04-C3-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D04-C3-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D05-C0-P0-K0-S0",
+      "design_index": 5,
+      "round": 0,
+      "path": "C0P0K0",
+      "baseline": true,
+      "selected": false,
+      "sequence": "SVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLG",
+      "models": [
+        {
+          "id": "main:SYNTHETIC-D05:C0:P0:K0:S0:M0",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.775,
+            "iptm": 0.69,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D05-C0-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D05-C0-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "main:SYNTHETIC-D05:C0:P0:K0:S0:M1",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.773,
+            "iptm": 0.69,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D05-C0-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D05-C0-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "main:SYNTHETIC-D05:C0:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D05-C0-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D05-C0-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D05-C0-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D05-C1-P0-K0-S0",
+      "design_index": 5,
+      "round": 1,
+      "path": "C1P0K0",
+      "baseline": false,
+      "selected": true,
+      "sequence": "SVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLG",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D05:C1:P0:K0:S0:M0",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.82,
+            "iptm": 0.69,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D05-C1-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D05-C1-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D05:C1:P0:K0:S0:M1",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.818,
+            "iptm": 0.69,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D05-C1-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D05-C1-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D05:C1:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D05-C1-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D05-C1-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D05-C1-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D05-C2-P0-K0-S0",
+      "design_index": 5,
+      "round": 2,
+      "path": "C2P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "SVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLG",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D05:C2:P0:K0:S0:M0",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.805,
+            "iptm": 0.69,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D05-C2-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D05-C2-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D05:C2:P0:K0:S0:M1",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.803,
+            "iptm": 0.69,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D05-C2-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D05-C2-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D05:C2:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D05-C2-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D05-C2-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D05-C2-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D05-C3-P0-K0-S0",
+      "design_index": 5,
+      "round": 3,
+      "path": "C3P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "SVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLG",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D05:C3:P0:K0:S0:M0",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.795,
+            "iptm": 0.69,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D05-C3-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D05-C3-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D05:C3:P0:K0:S0:M1",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.793,
+            "iptm": 0.69,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D05-C3-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D05-C3-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D05:C3:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D05-C3-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D05-C3-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D05-C3-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D06-C0-P0-K0-S0",
+      "design_index": 6,
+      "round": 0,
+      "path": "C0P0K0",
+      "baseline": true,
+      "selected": true,
+      "sequence": "VTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGS",
+      "models": [
+        {
+          "id": "main:SYNTHETIC-D06:C0:P0:K0:S0:M0",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.766,
+            "iptm": 0.698,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D06-C0-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D06-C0-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "main:SYNTHETIC-D06:C0:P0:K0:S0:M1",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.764,
+            "iptm": 0.698,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D06-C0-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D06-C0-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "main:SYNTHETIC-D06:C0:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D06-C0-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D06-C0-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D06-C0-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D06-C1-P0-K0-S0",
+      "design_index": 6,
+      "round": 1,
+      "path": "C1P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "VTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGS",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D06:C1:P0:K0:S0:M0",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.766,
+            "iptm": 0.698,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D06-C1-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D06-C1-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D06:C1:P0:K0:S0:M1",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.764,
+            "iptm": 0.698,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D06-C1-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D06-C1-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D06:C1:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D06-C1-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D06-C1-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D06-C1-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D06-C2-P0-K0-S0",
+      "design_index": 6,
+      "round": 2,
+      "path": "C2P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "VTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGS",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D06:C2:P0:K0:S0:M0",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.766,
+            "iptm": 0.698,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D06-C2-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D06-C2-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D06:C2:P0:K0:S0:M1",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.764,
+            "iptm": 0.698,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D06-C2-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D06-C2-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D06:C2:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D06-C2-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D06-C2-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D06-C2-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D06-C3-P0-K0-S0",
+      "design_index": 6,
+      "round": 3,
+      "path": "C3P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "VTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGS",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D06:C3:P0:K0:S0:M0",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.766,
+            "iptm": 0.698,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D06-C3-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D06-C3-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D06:C3:P0:K0:S0:M1",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.764,
+            "iptm": 0.698,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D06-C3-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D06-C3-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D06:C3:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D06-C3-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D06-C3-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D06-C3-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D07-C0-P0-K0-S0",
+      "design_index": 7,
+      "round": 0,
+      "path": "C0P0K0",
+      "baseline": true,
+      "selected": false,
+      "sequence": "TAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSV",
+      "models": [
+        {
+          "id": "main:SYNTHETIC-D07:C0:P0:K0:S0:M0",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.757,
+            "iptm": 0.706,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D07-C0-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D07-C0-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "main:SYNTHETIC-D07:C0:P0:K0:S0:M1",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.755,
+            "iptm": 0.706,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D07-C0-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D07-C0-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "main:SYNTHETIC-D07:C0:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D07-C0-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D07-C0-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D07-C0-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D07-C1-P0-K0-S0",
+      "design_index": 7,
+      "round": 1,
+      "path": "C1P0K0",
+      "baseline": false,
+      "selected": true,
+      "sequence": "TAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSV",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D07:C1:P0:K0:S0:M0",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.802,
+            "iptm": 0.706,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D07-C1-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D07-C1-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D07:C1:P0:K0:S0:M1",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.8,
+            "iptm": 0.706,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D07-C1-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D07-C1-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D07:C1:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D07-C1-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D07-C1-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D07-C1-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D07-C2-P0-K0-S0",
+      "design_index": 7,
+      "round": 2,
+      "path": "C2P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "TAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSV",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D07:C2:P0:K0:S0:M0",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.787,
+            "iptm": 0.706,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D07-C2-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D07-C2-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D07:C2:P0:K0:S0:M1",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.785,
+            "iptm": 0.706,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D07-C2-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D07-C2-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D07:C2:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D07-C2-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D07-C2-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D07-C2-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D07-C3-P0-K0-S0",
+      "design_index": 7,
+      "round": 3,
+      "path": "C3P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "TAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSV",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D07:C3:P0:K0:S0:M0",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.777,
+            "iptm": 0.706,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D07-C3-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D07-C3-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D07:C3:P0:K0:S0:M1",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.775,
+            "iptm": 0.706,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D07-C3-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D07-C3-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D07:C3:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D07-C3-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D07-C3-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D07-C3-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D08-C0-P0-K0-S0",
+      "design_index": 8,
+      "round": 0,
+      "path": "C0P0K0",
+      "baseline": true,
+      "selected": false,
+      "sequence": "AEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVT",
+      "models": [
+        {
+          "id": "main:SYNTHETIC-D08:C0:P0:K0:S0:M0",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.748,
+            "iptm": 0.714,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D08-C0-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D08-C0-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "main:SYNTHETIC-D08:C0:P0:K0:S0:M1",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.746,
+            "iptm": 0.714,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D08-C0-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D08-C0-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "main:SYNTHETIC-D08:C0:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D08-C0-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D08-C0-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D08-C0-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D08-C1-P0-K0-S0",
+      "design_index": 8,
+      "round": 1,
+      "path": "C1P0K0",
+      "baseline": false,
+      "selected": true,
+      "sequence": "AEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVT",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D08:C1:P0:K0:S0:M0",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.793,
+            "iptm": 0.714,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D08-C1-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D08-C1-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D08:C1:P0:K0:S0:M1",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.791,
+            "iptm": 0.714,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D08-C1-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D08-C1-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D08:C1:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D08-C1-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D08-C1-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D08-C1-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D08-C2-P0-K0-S0",
+      "design_index": 8,
+      "round": 2,
+      "path": "C2P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "AEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVT",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D08:C2:P0:K0:S0:M0",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.778,
+            "iptm": 0.714,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D08-C2-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D08-C2-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D08:C2:P0:K0:S0:M1",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.776,
+            "iptm": 0.714,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D08-C2-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D08-C2-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D08:C2:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D08-C2-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D08-C2-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D08-C2-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D08-C3-P0-K0-S0",
+      "design_index": 8,
+      "round": 3,
+      "path": "C3P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "AEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVT",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D08:C3:P0:K0:S0:M0",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.768,
+            "iptm": 0.714,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D08-C3-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D08-C3-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D08:C3:P0:K0:S0:M1",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.766,
+            "iptm": 0.714,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D08-C3-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D08-C3-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D08:C3:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D08-C3-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D08-C3-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D08-C3-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D09-C0-P0-K0-S0",
+      "design_index": 9,
+      "round": 0,
+      "path": "C0P0K0",
+      "baseline": true,
+      "selected": true,
+      "sequence": "EKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTA",
+      "models": [
+        {
+          "id": "main:SYNTHETIC-D09:C0:P0:K0:S0:M0",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.739,
+            "iptm": 0.722,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D09-C0-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D09-C0-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "main:SYNTHETIC-D09:C0:P0:K0:S0:M1",
+          "round": 0,
+          "path": "C0P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.737,
+            "iptm": 0.722,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.25,
+            "binder_pose_rmsd_A": 0.0,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D09-C0-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D09-C0-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "main:SYNTHETIC-D09:C0:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D09-C0-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D09-C0-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D09-C0-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D09-C1-P0-K0-S0",
+      "design_index": 9,
+      "round": 1,
+      "path": "C1P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "EKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTA",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D09:C1:P0:K0:S0:M0",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.739,
+            "iptm": 0.722,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D09-C1-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D09-C1-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D09:C1:P0:K0:S0:M1",
+          "round": 1,
+          "path": "C1P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.737,
+            "iptm": 0.722,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.35,
+            "binder_pose_rmsd_A": 0.35,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D09-C1-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D09-C1-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D09:C1:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D09-C1-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D09-C1-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D09-C1-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D09-C2-P0-K0-S0",
+      "design_index": 9,
+      "round": 2,
+      "path": "C2P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "EKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTA",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D09:C2:P0:K0:S0:M0",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.739,
+            "iptm": 0.722,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D09-C2-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D09-C2-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D09:C2:P0:K0:S0:M1",
+          "round": 2,
+          "path": "C2P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.737,
+            "iptm": 0.722,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.45,
+            "binder_pose_rmsd_A": 0.7,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D09-C2-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D09-C2-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D09:C2:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D09-C2-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D09-C2-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D09-C2-P0-K0-S0-mpnn.cif"
+    },
+    {
+      "pair_id": "SYNTHETIC-D09-C3-P0-K0-S0",
+      "design_index": 9,
+      "round": 3,
+      "path": "C3P0K0",
+      "baseline": false,
+      "selected": false,
+      "sequence": "EKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTAEKLGSVTA",
+      "models": [
+        {
+          "id": "refine:SYNTHETIC-D09:C3:P0:K0:S0:M0",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 0,
+          "summary": {
+            "ranking_score": 0.739,
+            "iptm": 0.722,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D09-C3-P0-K0-S0-M0.cif",
+          "conf": "objects/SYNTHETIC-D09-C3-P0-K0-S0-M0.json"
+        },
+        {
+          "id": "refine:SYNTHETIC-D09:C3:P0:K0:S0:M1",
+          "round": 3,
+          "path": "C3P0K0",
+          "model_index": 1,
+          "summary": {
+            "ranking_score": 0.737,
+            "iptm": 0.722,
+            "ptm": 0.7,
+            "overall_plddt": 0.74,
+            "overall_pae": 5.2,
+            "has_clash": false,
+            "chain_pair_pae": [
+              [
+                0,
+                4.8
+              ],
+              [
+                4.8,
+                0
+              ]
+            ],
+            "chain_pair_pae_min": [
+              [
+                0,
+                2.1
+              ],
+              [
+                2.1,
+                0
+              ]
+            ],
+            "synthetic": true
+          },
+          "metrics": {
+            "binder_self_rmsd_A": 0.55,
+            "binder_pose_rmsd_A": 1.0499999999999998,
+            "target_fragment_rmsd_A": 0.0,
+            "target_contact_residues": 3,
+            "contact_atom_pairs": 7,
+            "min_distance_A": 4.2,
+            "has_geometric_clash": false,
+            "synthetic": true
+          },
+          "valid_output": true,
+          "synthetic": true,
+          "cif": "objects/SYNTHETIC-D09-C3-P0-K0-S0-M1.cif",
+          "conf": "objects/SYNTHETIC-D09-C3-P0-K0-S0-M1.json"
+        }
+      ],
+      "retained_model_ids": [
+        "refine:SYNTHETIC-D09:C3:P0:K0:S0:M0"
+      ],
+      "script": "data/structures/SYNTHETIC-D09-C3-P0-K0-S0.js",
+      "generated": "objects/SYNTHETIC-D09-C3-P0-K0-S0-generated.cif",
+      "mpnn": "objects/SYNTHETIC-D09-C3-P0-K0-S0-mpnn.cif"
+    }
+  ],
+  "scientific_GPU": "NOT RUN"
+}

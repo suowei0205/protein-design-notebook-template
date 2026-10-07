@@ -736,7 +736,7 @@ def page(data,destination):
         for old,new in [('SR56 ·','Design ·'),('SR56 —','Design —'),('SR56 报告','Design 报告'),('SR56 研究','Design 研究'),('>SR56<','>Design<'),('NESPRIN · SPECTRIN REPEAT 56','PROTEIN DESIGN · UNCONFIGURED TEMPLATE')]:
             template=template.replace(old,new)
         if complete_template:template=template.replace('UNCONFIGURED TEMPLATE','BINDER PIPELINE TEMPLATE')
-    css=(ASSETS/'report.css').read_text(encoding='utf-8');js=(ASSETS/'report.js').read_text(encoding='utf-8')
+    css=(ASSETS/'report.css').read_text(encoding='utf-8');js=(ASSETS/'af3_names.js').read_text(encoding='utf-8')+'\n'+(ASSETS/'report.js').read_text(encoding='utf-8')
     if generic:js=js.replace('SR56 — SIX BRANCH ATLAS','DESIGN — PROJECT ATLAS').replace('SR56 — RUN ARCHIVE','DESIGN — RUN ARCHIVE')
     if data.get('layout_version')==2:
         js=js.replace("? value : '';", "? '../'+value : '';",1)

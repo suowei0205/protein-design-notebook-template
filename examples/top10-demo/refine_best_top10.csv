@@ -1,0 +1,12 @@
+# SYNTHETIC DEMO: fictional sequence, coordinates and metrics; no scientific inference.
+design_index,candidate_id,ranking_score,rank
+1,refine:SYNTHETIC-D01:C1:P0:K0:S0:M0,0.856,1
+2,refine:SYNTHETIC-D02:C1:P0:K0:S0:M0,0.847,2
+4,refine:SYNTHETIC-D04:C1:P0:K0:S0:M0,0.829,3
+0,main:SYNTHETIC-D00:C0:P0:K0:S0:M0,0.82,4
+5,refine:SYNTHETIC-D05:C1:P0:K0:S0:M0,0.82,5
+7,refine:SYNTHETIC-D07:C1:P0:K0:S0:M0,0.802,6
+3,main:SYNTHETIC-D03:C0:P0:K0:S0:M0,0.793,7
+8,refine:SYNTHETIC-D08:C1:P0:K0:S0:M0,0.793,8
+6,main:SYNTHETIC-D06:C0:P0:K0:S0:M0,0.766,9
+9,main:SYNTHETIC-D09:C0:P0:K0:S0:M0,0.739,10

@@ -99,7 +99,13 @@ DesignProject/
 
 打开 [examples/SR56](examples/SR56/README.md)，选择对应分支。SR56 原始来源和散列见 [PROVENANCE.json](examples/SR56/PROVENANCE.json)。仓库中的科学代码与已验收发布版保持一致；共享资源增加通用模板支持，资源包与 notebook pin 由构建工具重生成，因此整个包的字节散列会变化，不能接管旧发布版断点。
 
-本仓库没有历史计算结果、TOP10结构评审、真实反馈包或模型权重。SR56 example 的输入是已核验发布包中的示例材料，不等于实验验证或力状态机制证据。
+本仓库不包含真实历史计算结果、真实TOP10结构评审数据、真实反馈包或模型权重。SR56 example 的输入是已核验发布包中的示例材料，不等于实验验证或力状态机制证据。
+
+## TOP10 查看器演示与 AF3 命名
+
+[合成 TOP10 演示](examples/top10-demo/README.md)沿用结构评审页的双视窗、固定baseline、主榜/全循环最佳榜和下载交互。克隆完整仓库后打开 `examples/top10-demo/index.html`；全部数据为合成，不含真实 TOP10 设计结果。
+
+查看页额外显示可复制 AF3 名称：蛋白、区域、靶标描述、UniProt、输入残基范围、设计模式、排名及完整候选 ID。未知字段保留待填，无正式排名使用unranked；[设计模式与命名规范](docs/AF3_NAMING.md)区分设计任务、binder类型、榜单和main/refine阶段。
 
 ## 后期维护
 
@@ -109,6 +115,8 @@ DesignProject/
 python3 scripts/build.py
 python3 scripts/build.py --check
 python3 tests/verify.py
+python3 scripts/build_top10_demo.py --check
+python3 tests/top10_demo.py
 # 已安装开发依赖时，实际启动 kernel 检查
 python3 tests/kernel_smoke.py
 # 已安装开发依赖时，靶标边界及真实循环的CPU假引擎检查

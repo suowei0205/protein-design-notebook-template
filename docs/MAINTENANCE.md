@@ -7,6 +7,8 @@
 | 可读目录、严格身份与资源核验 | `runtime/standalone_runtime.py` | build → verify → kernel |
 | 通用靶标预检/编号映射 | `runtime/target_input.py` | build → target_input_check → pipeline_cpu → verify |
 | 观测、反馈、校验与合并 | `runtime/sr56_feedback.py` | build → verify → kernel |
+| AF3显示名与命名规则 | `runtime/assets/af3_names.js`、`docs/AF3_NAMING.md` | build → top10_demo → verify；浏览器核对当前模型/榜单/baseline |
+| TOP10合成演示 | `scripts/build_top10_demo.py`、`examples/top10-demo/index.html`、`viewer_app.js` | 生成器 → top10_demo；浏览器及公开数据边界检查 |
 | 可信离线页面 | `runtime/assets/` | build → verify；浏览器验证相关交互 |
 | 完整空白模板 | `template/DesignProject/DesignProject.ipynb` | build → verify → kernel |
 | SR56科学流程 | `examples/SR56/*/*.ipynb` | 更新版本/来源证据，科学审查与适用CPU/GPU验证 |
@@ -54,3 +56,5 @@
 ## 常见情况
 
 资源pin不匹配：重新构建正确版本，不手改pin绕过检查。恢复被拒绝：先核验身份差异，科学参数/源码/资源变化时新建运行。活动kernel占用：由使用者结束其kernel，不要删除锁文件抢占。反馈结构缺失：查看补取清单；精选结构包不能提供全量续跑材料。ZIP无SHA旁文件：导出过程未完整交付，先校验内部清单并重新导出新快照，不宣称双文件事务。
+
+合成演示生成器只读取固定合成参数，`--check` 在临时目录重建并逐字节核对。修改手写HTML/查看器不直接修改生成数据；生成器变更后重建并提交`GENERATED.json`及对应数据。禁止以真实结果作为演示fixture，禁止将本地检查记录、截图或私有路径复制到公开仓库。
