@@ -102,7 +102,7 @@ git push origin main
 
 `tests/verify.py` 使用标准库：检查构建确定性、清单/pin、空模板真实 `NOT_RUN` 导出、严格恢复与拒绝、符号链接/路径边界、SR56科学来源指纹和Git忽略规则。`kernel_smoke.py` 实际启动空模板及六个SR56 bootstrap，只导出零候选反馈，不导入科学引擎。GitHub Actions 在 push/PR 时执行这些检查，**不证明真实GPU、科学流程有效性或性能**。
 
-运行文件、`projects/`、断点、反馈、缓存、权重和环境文件默认忽略；源码、输入示例、空 notebook、许可和生成资源包应跟踪。notebook 提交前清空执行输出，测试会拒绝带输出的文件。**当前仓库为私有 GitHub Template repository**；可使用 GitHub 的 “Use this template”，复制后自行更新 README 的 clone 地址。
+运行文件、`projects/`、断点、反馈、缓存、权重和环境文件默认忽略；源码、输入示例、空 notebook、许可和生成资源包应跟踪。notebook 提交前清空执行输出，测试会拒绝带输出的文件。**当前仓库为公开 GitHub Template repository**；可使用 GitHub 的 “Use this template”，复制后自行更新 README 的 clone 地址。公开范围包含仓库文件、提交历史和 Actions 日志；个人研究项目与运行结果继续保存在本地或独立私有仓库。
 
 更详细的接口、版本变更和验证边界见 [维护说明](docs/MAINTENANCE.md) 与 [验证记录](docs/VALIDATION.md)。
 
