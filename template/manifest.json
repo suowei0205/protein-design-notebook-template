@@ -1,0 +1,10 @@
+{
+  "schema": "sr56-standalone-layout-entries-v3",
+  "entries": [
+    {
+      "branch": "template_project",
+      "filename": "DesignProject/DesignProject.ipynb",
+      "namespace": "design_template_v1"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Project rules
+
+- 中文文档；代码/API保留原命名。共享runtime为唯一编辑入口，不能只改生成ZIP。
+- 修改源码或notebook后：`python scripts/build.py` → `python tests/verify.py`；改变启动/结束行为另跑 `python tests/kernel_smoke.py`。
+- 禁止将空模板初始化/导出标为科学完成：默认 `NOT_RUN`。不得把静态、CPU或kernel验证称为GPU/科学有效性验证。
+- SR56科学来源指纹不得为了绿灯自动覆盖。科学改动先说明参数、判据、版本与验收范围；保留原结果。
+- 保持单元ID、順序与折叠metadata；发布notebook无执行输出。源码、资源和pin更新必须同步。
+- 不跟踪projects、run_*、监视日志、反馈快照、断点、缓存、权重或凭据；不改无关本地文件。
+- 运行身份、反馈版本、候选标识、工件散列和相对路径属于协议，修改时同步写出和读取、测试未知版本拒绝。
+- 不安装/升级科学环境，不运行GPU，不操作远程任务，除非当前用户明确授权。

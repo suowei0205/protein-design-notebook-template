@@ -1,0 +1,74 @@
+{
+  "source_release": "SR56_六分支_独立Notebook_清晰目录与反馈包_2026-10-07",
+  "source_resources_sha256": "8c85a6c18ae6e23f301138420f4f7a76b5b5c6c0ab427a29b9ab61d15453cbdd",
+  "files": [
+    {
+      "path": "README.html",
+      "sha256": "531d780f39e23e199611800b651d7e0233f2b0502819214a03805475b3b5d148"
+    },
+    {
+      "path": "SR56_A_minibinder/SR56_A_minibinder.ipynb",
+      "sha256": "16664a68fcf20dc8646f8220ed7ac04cae78979e925d9a1e3638d30b8c22eee4"
+    },
+    {
+      "path": "SR56_A_short_peptide/SR56_A_short_peptide.ipynb",
+      "sha256": "9f62c179d94c8f7d251413e23004df7813f8015dd6cd42be1dc6bbeab3222095"
+    },
+    {
+      "path": "SR56_B_minibinder/SR56_B_minibinder.ipynb",
+      "sha256": "56d0f559d3d0798dc980d789de22e68b8a97ee4879ebfc077af3c6e55aa7bab4"
+    },
+    {
+      "path": "SR56_B_short_peptide/SR56_B_short_peptide.ipynb",
+      "sha256": "3f7f41163958bb34ec002485e3573e8d1e864f80e9951816fa98ebeafff54080"
+    },
+    {
+      "path": "SR56_C_minibinder/SR56_C_minibinder.ipynb",
+      "sha256": "059ca3b7fac84533d9b157ccc7997773e33fe0a6fc10ff43edf4a216905914d0"
+    },
+    {
+      "path": "SR56_C_short_peptide/SR56_C_short_peptide.ipynb",
+      "sha256": "09cfd309229a1dab706684c9f20d140395644285c236c6e6d5e167b8f119c442"
+    },
+    {
+      "path": "resources.zip",
+      "sha256": "8c85a6c18ae6e23f301138420f4f7a76b5b5c6c0ab427a29b9ab61d15453cbdd"
+    }
+  ],
+  "notebook_fingerprints": [
+    {
+      "path": "SR56_A_minibinder/SR56_A_minibinder.ipynb",
+      "source_with_pin_normalized_sha256": "48e228269543a567af97b21e2bc540c48d3b3d553a6b8b193a6bd839f83201e8"
+    },
+    {
+      "path": "SR56_A_short_peptide/SR56_A_short_peptide.ipynb",
+      "source_with_pin_normalized_sha256": "a6edfd1dee782a88aa640676e592b846681215b145eab4177d1672988ac4cd04"
+    },
+    {
+      "path": "SR56_B_minibinder/SR56_B_minibinder.ipynb",
+      "source_with_pin_normalized_sha256": "6c38a26b8b77112b4cdc29f44552bc0db16705b3ba344655897594f9373962c2"
+    },
+    {
+      "path": "SR56_B_short_peptide/SR56_B_short_peptide.ipynb",
+      "source_with_pin_normalized_sha256": "9d8cfecefbcfcb96861242d8dee192ec12775da1a6f8fa2f029df63576201165"
+    },
+    {
+      "path": "SR56_C_minibinder/SR56_C_minibinder.ipynb",
+      "source_with_pin_normalized_sha256": "562a9bbefb2f475b3aef1bf6cae7c80278939f5a927cd267dc9eda47928ac5b8"
+    },
+    {
+      "path": "SR56_C_short_peptide/SR56_C_short_peptide.ipynb",
+      "source_with_pin_normalized_sha256": "4a5a0ad48cec0d78d2343a7cf43fa7840c7a983caf534012e91f05bbdb884f6b"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "inputs/Q6ZWQ0.fasta",
+      "sha256": "7e6d177e98fe0293894c66bb930714e8b8c3a47f0ad79a991be7459af790fb2f"
+    },
+    {
+      "path": "inputs/fold_nesprin_sr54_sr56.zip",
+      "sha256": "b1b7cd59fb27f850a6744786d3d139e7c54cdd51f6028b4aa660ff10028a6726"
+    }
+  ]
+}

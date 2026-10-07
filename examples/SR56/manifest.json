@@ -1,0 +1,35 @@
+{
+  "schema": "sr56-standalone-layout-entries-v3",
+  "entries": [
+    {
+      "branch": "A_minibinder",
+      "filename": "SR56_A_minibinder/SR56_A_minibinder.ipynb",
+      "namespace": "sr56_a_helix32_minibinder_large256_refine_v3_20261002_chain_terminal_oxt_v1_20261004_output_v1_20261007_compact_v2_20261007_layout_v3"
+    },
+    {
+      "branch": "A_short_peptide",
+      "filename": "SR56_A_short_peptide/SR56_A_short_peptide.ipynb",
+      "namespace": "sr56_a_helix32_short_peptide_large256_refine_v4_20261002_chain_terminal_oxt_v1_20261004_output_v1_20261007_compact_v2_20261007_layout_v3"
+    },
+    {
+      "branch": "B_minibinder",
+      "filename": "SR56_B_minibinder/SR56_B_minibinder.ipynb",
+      "namespace": "sr56_b_helix45_minibinder_large256_refine_v4_20261002_chain_terminal_oxt_v1_20261004_output_v1_20261007_compact_v2_20261007_layout_v3"
+    },
+    {
+      "branch": "B_short_peptide",
+      "filename": "SR56_B_short_peptide/SR56_B_short_peptide.ipynb",
+      "namespace": "sr56_b_helix45_short_peptide_large256_refine_v4_20261002_chain_terminal_oxt_v1_20261004_output_v1_20261007_compact_v2_20261007_layout_v3"
+    },
+    {
+      "branch": "C_minibinder",
+      "filename": "SR56_C_minibinder/SR56_C_minibinder.ipynb",
+      "namespace": "sr56_c_helix45_minibinder_large256_refine_v4_20261002_chain_terminal_oxt_v1_20261004_output_v1_20261007_compact_v2_20261007_layout_v3"
+    },
+    {
+      "branch": "C_short_peptide",
+      "filename": "SR56_C_short_peptide/SR56_C_short_peptide.ipynb",
+      "namespace": "sr56_c_helix45_short_peptide_large256_refine_v4_20261002_chain_terminal_oxt_v1_20261004_output_v1_20261007_compact_v2_20261007_layout_v3"
+    }
+  ]
+}

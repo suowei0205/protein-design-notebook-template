@@ -1,0 +1,12 @@
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.ipynb text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.zip binary
+*.ttf binary
+# Preserve the bundled upstream license text, including its line-end spaces.
+runtime/assets/LICENSE_DEJAVU whitespace=-blank-at-eol
+runtime/assets/NotoSansSC_OFL.txt whitespace=-blank-at-eol

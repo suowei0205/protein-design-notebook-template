@@ -1,0 +1,26 @@
+# Local experiments and scientific payloads
+projects/
+**/run_*/
+**/.resources/
+**/.run_names.lock
+**/.standalone.lock
+**/.ipynb_checkpoints/
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+weights/
+cache/
+feedback/
+checkpoints/
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.partial
+.env
+.env.*
+!.env.example
+.DS_Store
+# Reports from test runs (CI prints evidence in its own log)
+build/
