@@ -1,30 +1,31 @@
-# 维护与接入说明
+# 维护说明
 
 ## 单一编辑入口
 
 | 内容 | 编辑位置 | 随后执行 |
 |---|---|---|
 | 可读目录、严格身份与资源核验 | `runtime/standalone_runtime.py` | build → verify → kernel |
+| 通用靶标预检/编号映射 | `runtime/target_input.py` | build → target_input_check → pipeline_cpu → verify |
 | 观测、反馈、校验与合并 | `runtime/sr56_feedback.py` | build → verify → kernel |
 | 可信离线页面 | `runtime/assets/` | build → verify；浏览器验证相关交互 |
-| 空白模板 | `template/DesignProject/DesignProject.ipynb` | build → verify → kernel |
+| 完整空白模板 | `template/DesignProject/DesignProject.ipynb` | build → verify → kernel |
 | SR56科学流程 | `examples/SR56/*/*.ipynb` | 更新版本/来源证据，科学审查与适用CPU/GPU验证 |
 | SR56输入 | `examples/SR56/inputs/` | 更新来源、编号和版本；新运行，不接管旧断点 |
 | 入口/命名空间 | 对应 `manifest.json` | build → verify → kernel |
 
 `python scripts/build.py` 用固定ZIP元数据从源码重建资源包，并更新每个notebook唯一的资源pin。`--check` 重新计算并逐字节比较，不修改文件；提交源码而不重建会使CI失败。`manifest.json` 是入口配置，包内 `NOTEBOOKS.json`、`RUNTIME_FILES.json` 和 `RESOURCE_MANIFEST.json` 为生成文件。两个分发包都必须包含当前共享源码，禁止只改某份ZIP。
 
-## 空模板接入真实计算
+## 模板使用与科学流程维护
 
-默认分支 `template_project` 和 `design_template_v1` 是已注册入口，不推断 helix 或 binder 类别。输入、参数和预算留空就是未知；`NOT_RUN` 表示尚未执行，初始化或导出不能更改为成功。真正接入科学引擎后，在对应单元实现：
+模板已经实现单链标准蛋白binder的RFD3→MPNN→RF3→refine全流程。普通使用者只改第4/8/9三个参数单元；不填写计算代码。入口为 `template_project / design_template_pipeline_v2`，不接管旧v1骨架断点。
 
-1. 显式核验靶标序列、结构、chain、编号、构象与设计任务。
-2. 在完整科学配置中记录seed、预算、有效性规则和版本，并将外部输入文件内容的 SHA-256 纳入配置或 target，再调用 `_feedback.configure` 冻结身份；恢复前重新计算并核验输入散列。空模板默认只冻结填写值和文件路径，同路径文件的字节变化不会自动被发现。仅 `RUN_LABEL` 和部署/恢复设置身份中性；不要把科学参数加入 `LAUNCH_VALUES`。
-3. 原件落 `main/refine` 阶段目录；排名到 `rankings`，审计到 `reports/main` 或 `reports/refine`，曲线到 `svg`。
-4. 完成数由原子阶段回执和工件散列证明。观测事件本身不算已完成；所有候选（含无效输出）保留模型级证据。
-5. 真实结束时显式选择 `COMPLETED`、`FAILED` 或 `INTERRUPTED`；空模板继续用 `NOT_RUN`。`COMPLETED` 仅是计算状态，不等于结合/科学有效性。
+第8单元输入本地PDB/mmCIF、author链、可选author残基范围、model/altloc及期望序列。`target_input.py`只从一次读取的源字节解析：PDB author字段，mmCIF `use_author_fields=True`；默认model1和每残基最高occupancy，允许改为first。保留源(chain,res_id,ins_code)映射，内部规范化为A1..N；水/配体排除，非标准/modified peptide、编号缺口、缺或重复N/CA/C/O、非有限坐标与无法定义对齐参考系的退化几何拒绝。范围端点必须存在，不补缺失残基。
 
-当前反馈采集器识别RFD3/MPNN/RF3回执协议，不是任意引擎插件框架。SR56 notebook 的 `_ckpt_save`、`_feedback_model`、`_feedback_pair`、baseline和beam记录是可执行参考；接入其他流程时先定义并核验转换，不能伪造该协议的完成数。
+输入源SHA、选取规则、实际序列SHA、规范化CIF SHA和完整编号映射进入target身份；恢复前重新准备并对比已冻结身份与工件；阶段读取前及计算指纹处再次核对源字节、准备CIF和provenance。不能手改hash绕过错误。source path也是参数，移动源文件或改内容需新运行。仅 `RUN_LABEL` 和部署/恢复设置身份中性，不把科学参数加入 `LAUNCH_VALUES`。
+
+原件落main/refine对应阶段；排名在rankings，审计在reports/main或refine，曲线在svg，回执在checkpoints。完成数由原子阶段回执及工件散列证明，观测事件本身不算完成。未填靶标在科学导入前拒绝，保存NOT_RUN；完整执行结束为COMPLETED，失败/中断由实际状态记录。COMPLETED仅是计算状态，不等于结合或科学有效性。
+
+共享采集器识别RFD3/MPNN/RF3回执协议。模板已经直接产生此协议的主/refine回执、模型证据、baseline与beam记录；它不是任意引擎插件框架。若维护者新增motif/ligand/多链等其他科学任务，需先定义范围和验证转换，不伪造完成数；普通用户不需要这样接入。
 
 | 回执路径 | 典型key / 身份 |
 |---|---|
@@ -48,7 +49,7 @@
 - 日常新项目保存在默认忽略的 `projects/`。若项目科学notebook需独立版本控制，放入另一个私有仓库或显式审查后调整忽略规则；不要强制添加整个运行目录。
 - 不提交凭据、运行日志、私有绝对路径、科学权重或执行输出。资源ZIP只允许源码、可信页面资产、许可、示例输入和生成清单。
 - `.github/workflows/check.yml` 只有push/PR触发，权限只读；不定时运行、不远程推理。固定Actions提交SHA；升级时先核验官方源提交再更新。
-- 每次改变runtime/notebook后执行build和verify；改变启动/结束行为后执行真实kernel检查；改变页面后另做离线浏览器检查。科学参数/引擎接口改变需要额外CPU或科学环境验收，不能把本CI当GPU证明。
+- 每次改变runtime/notebook后执行build和verify；改通用靶标/科学循环另跑target_input_check和pipeline_cpu；改变启动/结束行为后执行真实kernel检查；改变页面后另做离线浏览器检查。科学参数/引擎接口改变需要额外CPU或科学环境验收，不能把本CI当GPU证明。
 
 ## 常见情况
 

@@ -1,8 +1,8 @@
 # Protein Design Notebook Template
 
-可维护的蛋白设计 notebook 项目骨架：每个设计有自己的 notebook，各次运行直接放在该设计目录下；统一管理 main/refine、报告、排名、SVG、监视器、断点和反馈快照。
+可维护的蛋白 binder 设计 notebook 模板：计算流程已填好，只修改参数即可运行。每个设计有自己的 notebook，各次运行直接放在该设计目录下；统一管理 main/refine、报告、排名、SVG、监视器、断点和反馈快照。
 
-**空白模板不包含科学计算实现，完整执行后的状态为 `NOT_RUN`。** SR56 六分支作为完整流程 example，保留原参数、单元顺序、折叠设置、有效性判断、原生排名、固定 baseline 与全循环最佳选择。
+**“空白”指靶标输入留空；RFD3 → MPNN → RF3 → 排名 → refine → 报告与反馈均已实现。无需编写 main/refine。** SR56 六分支作为完整流程 example，保留原参数、单元顺序、折叠设置、有效性判断、原生排名、固定 baseline 与全循环最佳选择。
 
 ## 快速开始
 
@@ -12,7 +12,26 @@ cd protein-design-notebook-template
 python3 scripts/new_project.py projects/MyTarget
 ```
 
-用 Jupyter 或 VS Code 打开 `projects/MyTarget/DesignProject/DesignProject.ipynb`。将 kernel 工作目录设为 `DesignProject`，或填写启动单元的 `STANDALONE_PACKAGE_ROOT`。修改 `RUN_LABEL`，然后填写靶标和科学参数，并在主阶段/refine 单元接入你自己的计算。默认运行所有单元仅创建框架、`NOT_RUN` 报告和反馈，不加载科学引擎。
+用 Jupyter 或 VS Code 打开 `projects/MyTarget/DesignProject/DesignProject.ipynb`。选择已有匹配科学环境的 kernel，将工作目录设为 `DesignProject`，或填写启动单元的 `STANDALONE_PACKAGE_ROOT`。只修改三个参数单元：
+
+| 单元 | 填写内容 |
+|---|---|
+| 第4单元 | `RUN_LABEL`、输出/续跑开关、已有权重路径；通常只改实验短名 |
+| 第8单元 | 本地 `.pdb/.cif/.mmcif` 路径、源结构 author 链、可选残基范围/model/altloc及期望序列 |
+| 第9单元 | binder长度、主阶段预算/seed、MPNN/RF3与refine参数；已有默认值 |
+
+例如将自己的靶标文件放到 `projects/MyTarget/inputs/target.cif`，在第8单元填写：
+
+```python
+TARGET_STRUCTURE_FILE = "../inputs/target.cif"
+SOURCE_CHAIN = "A"
+SOURCE_RESIDUE_RANGE = None  # 整链；也可填写实际author起止编号
+EXPECTED_TARGET_SEQUENCE = ""  # 可填写选中序列作额外核验
+```
+
+保存 notebook 后顺序运行所有单元即可执行完整流程。固定计算单元默认折叠，无需改代码。未填写靶标时，第10单元会在科学模块导入前明确停止并保存 `NOT_RUN` 报告和反馈，不会把空输入标为计算成功。
+
+模板支持**单链标准蛋白靶标＋单连续binder**。选中坐标按 author 链/编号及 insertion code 保存来源映射，内部统一为 `A1..N`；不会补齐缺失残基，编号缺口、非标准残基、缺失主链或退化坐标明确拒绝。水和普通配体记录排除。model默认1，altloc默认按残基最高occupancy；这是坐标选择规则，不是 canonical 全长或构象状态验证。其他设计任务不属于本模板。
 
 需要本地 notebook kernel 的开发环境：
 
@@ -24,7 +43,7 @@ python -m pip install -r requirements-dev.txt
 python tests/kernel_smoke.py
 ```
 
-开发依赖不是科学环境。SR56 的实际计算需另行准备已有、匹配的 Foundry/RFD3、MPNN、RF3、Torch/CUDA、权重和普通科学依赖；此仓库不自动下载权重、升级 GPU 环境或启动远程任务。运行锁目前使用 POSIX `fcntl`；支持 macOS / Linux，Windows 使用 WSL，不宣称原生 Windows 兼容。
+开发依赖只用于无GPU核验。模板和SR56的实际计算需使用已有、匹配的 Foundry/RFD3、MPNN、RF3、Torch/CUDA、权重和普通科学依赖；此仓库不自动下载权重、升级 GPU 环境或启动远程任务。运行锁目前使用 POSIX `fcntl`；支持 macOS / Linux，Windows 使用 WSL，不宣称原生 Windows 兼容。
 
 ## 目录
 
@@ -71,7 +90,7 @@ DesignProject/
 
 - `RUN_LABEL` 去首尾空白、NFC 规范化，允许文字、数字、下划线和连字符，最多40字符；非法字符或超长会拒绝。空值使用“未命名实验”。
 - 时间按北京时间；同名排他创建并加 `_02`、`_03`，不会覆盖目录。显示名称不替代内部 `run_id` 或科学身份。
-- 新参数、新代码、新输入或独立重复实验使用新运行。严格恢复：填写 `STANDALONE_OUTPUT_ROOT` 原目录，设 `STANDALONE_RESUME=True`。已冻结配置、源码、资源与已记录环境身份不符或目录已占用时拒绝。空模板只冻结填写的参数和路径，不自动核验外部结构文件的内容；接入计算时须把输入内容散列纳入配置或 target 并核验。SR56 示例保留原有科学输入校验。
+- 新参数、新代码、新输入或独立重复实验使用新运行。严格恢复：填写 `STANDALONE_OUTPUT_ROOT` 原目录，设 `STANDALONE_RESUME=True`。已冻结配置、源码、资源与已记录环境身份不符或目录已占用时拒绝。模板已核验输入内容SHA-256、选取规则、实际序列、规范化CIF与编号映射；同路径文件内容变化也会拒绝。完整模板使用 `design_template_pipeline_v2`，不接管旧 `design_template_v1` 骨架断点。SR56 示例保留原有科学输入校验。
 - `reports/index.html` 为结果报告；`monitor/index.html` 为轻量监视快照。监视器按可核验回执计完成数，不加载完整候选表。
 - `feedback/feedback_YYYY-MM-DD_HHMMSS.zip` 为独立快照，每份有 `.zip.sha256`；旧快照不覆盖。ZIP 和旁文件分别发布，二者不是同时原子事务。
 - 反馈继续使用“全量数值证据＋精选结构”；其余结构有补取清单。反馈不是完整续跑包。v1/v2反馈可只读校验与重建；未知版本拒绝，导入HTML/JS/SVG只保留在原ZIP，不进入可信重建页面。
@@ -92,6 +111,9 @@ python3 scripts/build.py --check
 python3 tests/verify.py
 # 已安装开发依赖时，实际启动 kernel 检查
 python3 tests/kernel_smoke.py
+# 已安装开发依赖时，靶标边界及真实循环的CPU假引擎检查
+python3 tests/target_input_check.py
+python3 tests/pipeline_cpu.py
 
 git diff --stat
 git diff --check
@@ -100,7 +122,7 @@ git commit -m "Describe the change"
 git push origin main
 ```
 
-`tests/verify.py` 使用标准库：检查构建确定性、清单/pin、空模板真实 `NOT_RUN` 导出、严格恢复与拒绝、符号链接/路径边界、SR56科学来源指纹和Git忽略规则。`kernel_smoke.py` 实际启动空模板及六个SR56 bootstrap，只导出零候选反馈，不导入科学引擎。GitHub Actions 在 push/PR 时执行这些检查，**不证明真实GPU、科学流程有效性或性能**。
+`tests/verify.py` 使用标准库检查构建、清单/pin、未配置靶标的 `NOT_RUN` 拒绝、严格恢复、反馈边界和来源指纹；并核对复用的科学循环AST。`kernel_smoke.py` 用实际kernel检查未配置模板的输入拒绝及六个SR56 bootstrap，未导入科学引擎。另有通用靶标预检和完整主/refine循环的CPU假引擎检查。GitHub Actions 在push/PR执行这些检查，**不证明真实GPU、科学有效性或性能**。
 
 运行文件、`projects/`、断点、反馈、缓存、权重和环境文件默认忽略；源码、输入示例、空 notebook、许可和生成资源包应跟踪。notebook 提交前清空执行输出，测试会拒绝带输出的文件。**当前仓库为公开 GitHub Template repository**；可使用 GitHub 的 “Use this template”，复制后自行更新 README 的 clone 地址。公开范围包含仓库文件、提交历史和 Actions 日志；个人研究项目与运行结果继续保存在本地或独立私有仓库。
 

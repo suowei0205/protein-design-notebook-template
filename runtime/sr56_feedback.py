@@ -731,8 +731,11 @@ def page(data,destination):
     template=(ASSETS/'report.html').read_text(encoding='utf-8')
     generic=data.get('run',{}).get('branch')=='template_project' or any(b.get('branch')=='template_project' for b in data.get('branches',[]))
     if generic:
+        complete_template=(data.get('run',{}).get('namespace')=='design_template_pipeline_v2'
+                           or any(b.get('identity',{}).get('namespace')=='design_template_pipeline_v2' for b in data.get('branches',[])))
         for old,new in [('SR56 ·','Design ·'),('SR56 —','Design —'),('SR56 报告','Design 报告'),('SR56 研究','Design 研究'),('>SR56<','>Design<'),('NESPRIN · SPECTRIN REPEAT 56','PROTEIN DESIGN · UNCONFIGURED TEMPLATE')]:
             template=template.replace(old,new)
+        if complete_template:template=template.replace('UNCONFIGURED TEMPLATE','BINDER PIPELINE TEMPLATE')
     css=(ASSETS/'report.css').read_text(encoding='utf-8');js=(ASSETS/'report.js').read_text(encoding='utf-8')
     if generic:js=js.replace('SR56 — SIX BRANCH ATLAS','DESIGN — PROJECT ATLAS').replace('SR56 — RUN ARCHIVE','DESIGN — RUN ARCHIVE')
     if data.get('layout_version')==2:
@@ -891,7 +894,8 @@ def assemble(root,destination,mode='report',structures=True):
         data['downloads'].append({'label':'全部缺失结构补取清单 JSON','path':'reports/missing_structure_request.json'})
         write_report_data(data,dest)
         counts=data['counts'];run=data['run']
-        atomic(dest/'reports/summary.md',f"# SR56 {run['branch']} 反馈摘要\n\n运行：{run['run_id']}\n\n状态：{run['status']}\n\n截至：{data['source_cutoff']}\n\nRF3序列对：{counts['rf3_pairs']}；模型：{counts['rf3_models']}；有效模型：{counts['valid_models']}。\n\n结构：全量数据与精选结构；其余见 artifact_index.json。\n\n"+'\n'.join(f"- D{x['design_index']}: {x['outcome']}; score gain {x['score_gain']}" for x in data.get('refine_effects',[]))+'\n\n'+'\n'.join('- '+x['code']+': '+x['message'] for x in data['issues'])+'\n')
+        summary_label='Design' if run.get('namespace')=='design_template_pipeline_v2' else 'SR56'
+        atomic(dest/'reports/summary.md',f"# {summary_label} {run['branch']} 反馈摘要\n\n运行：{run['run_id']}\n\n状态：{run['status']}\n\n截至：{data['source_cutoff']}\n\nRF3序列对：{counts['rf3_pairs']}；模型：{counts['rf3_models']}；有效模型：{counts['valid_models']}。\n\n结构：全量数据与精选结构；其余见 artifact_index.json。\n\n"+'\n'.join(f"- D{x['design_index']}: {x['outcome']}; score gain {x['score_gain']}" for x in data.get('refine_effects',[]))+'\n\n'+'\n'.join('- '+x['code']+': '+x['message'] for x in data['issues'])+'\n')
     page(data,dest/'reports');write_readme(dest)
     return data
 

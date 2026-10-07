@@ -1,8 +1,9 @@
-"""Actual kernels: blank full notebook + six example bootstraps; no science."""
+"""Actual kernels: unconfigured complete notebook + six example bootstraps; no science."""
 from pathlib import Path
 import json,shutil,sys,tempfile,zipfile
 import nbformat
 from nbclient import NotebookClient
+from nbclient.exceptions import CellExecutionError
 sys.dont_write_bytecode=True
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -21,16 +22,23 @@ def execute():
      synthetic="_feedback.configure({'pipeline_status':'NOT_RUN'},{'input':'BOOTSTRAP_ONLY'},_feedback.run['namespace'],_feedback.root)\n_feedback.finish('NOT_RUN')\n_feedback.close()\n"
      n=nbformat.v4.new_notebook(cells=[nbformat.v4.new_code_cell(source),nbformat.v4.new_code_cell(synthetic)])
     guard="import sys\nassert not any(n=='torch' or n.startswith(('rfd3','rf3','mpnn')) for n in sys.modules), 'Scientific engine was imported'\n"
-    n.cells[3 if package_name=='template' else 0].source+='\n'+guard
-    n.cells[-1].source+='\n'+guard
-    NotebookClient(n,timeout=90,kernel_name='python3').execute(cwd=str(p.parent))
+    if package_name=='template':
+     # Stop at the actual input gate: the downstream pipeline is filled, but input is absent.
+     gate=n.cells[9].source
+     n.cells[9].source=gate.replace('# TEMPLATE_INPUT_GATE_BEGIN','# TEMPLATE_INPUT_GATE_BEGIN\n'+guard)
+     try:NotebookClient(n,timeout=90,kernel_name='python3').execute(cwd=str(p.parent))
+     except CellExecutionError as error:assert '请填写第8单元的 TARGET_STRUCTURE_FILE' in str(error)
+     else:raise AssertionError('Unconfigured target was accepted')
+    else:
+     n.cells[0].source+='\n'+guard;n.cells[-1].source+='\n'+guard
+     NotebookClient(n,timeout=90,kernel_name='python3').execute(cwd=str(p.parent))
     runs=list(p.parent.glob('run_*'));assert len(runs)==1
     root=runs[0];session=json.loads((root/'monitor/session.json').read_text());assert session['status']=='NOT_RUN'
     for name in ('reports/index.html','monitor/index.html','checkpoints/input/notebook.ipynb'):assert (root/name).is_file()
     archives=list((root/'feedback').glob('*.zip'));assert len(archives)==1
     with zipfile.ZipFile(archives[0]) as z:
      assert z.testzip() is None;manifest=json.loads(z.read('MANIFEST.json'));assert manifest['computation_status']=='NOT_RUN' and manifest['layout_version']==2
-    count+=1;print('KERNEL PASS',e['branch'],'— bootstrap/feedback only, NOT_RUN',flush=True)
+    count+=1;print('KERNEL PASS',e['branch'],'— missing-input refusal or example bootstrap, NOT_RUN',flush=True)
  assert count==7
  print('PASS 7 actual kernels; no scientific engines, weights, GPU or remote tasks.')
 if __name__=='__main__':execute()

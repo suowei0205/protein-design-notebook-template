@@ -39,6 +39,16 @@ def run():
  assert expected=={'inputs/Q6ZWQ0.fasta','inputs/fold_nesprin_sr54_sr56.zip'}
  assert {p.relative_to(ROOT/'examples/SR56').as_posix() for p in (ROOT/'examples/SR56/inputs').rglob('*') if p.is_file()}==expected
  for item in provenance['inputs']:assert hashlib.sha256((ROOT/'examples/SR56'/item['path']).read_bytes()).hexdigest()==item['sha256']
+ template=json.loads((ROOT/'template/DesignProject/DesignProject.ipynb').read_text())
+ example=json.loads((ROOT/'examples/SR56/SR56_A_minibinder/SR56_A_minibinder.ipynb').read_text())
+ assert len(template['cells'])==36 and [c['id'] for c in template['cells']]==[c['id'] for c in example['cells']]
+ for i in (15,18,21,24,25,28,30,31,32,33,34):
+  actual=ast.parse(''.join(template['cells'][i-1]['source']))
+  if i==15:
+   assert ast.dump(actual.body[0])==ast.dump(ast.parse('_verify_target_input()').body[0])
+   actual.body=actual.body[1:]
+  assert ast.dump(actual)==ast.dump(ast.parse(''.join(example['cells'][i-1]['source']))),i
+ for i in (4,8,9):assert template['cells'][i-1]['metadata']['jupyter']['source_hidden'] is False
  for package in (ROOT/'template',ROOT/'examples/SR56'):
   with zipfile.ZipFile(package/'resources.zip') as z:
    assert z.testzip() is None and all(not n.startswith(('feedback/','weights/','cache/')) for n in z.namelist())
@@ -48,26 +58,35 @@ def run():
   temp=Path(tmp).resolve();package=temp/'moved';create(package);rejected(lambda:create(package));rejected(lambda:create(ROOT/'runtime/unsafe'))
   filename='DesignProject/DesignProject.ipynb';n,env=bootstrap(package,filename);res=env['_prepare_resources'](package)
   spec=importlib.util.spec_from_file_location('tested_runtime',res/'standalone_runtime.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
-  nb=package/filename;s=m.start(package,nb,'template_project','design_template_v1',background=False,resource_root=res,run_label=' 模板验证 ')
-  lifecycle={'_feedback':s}
-  for c in n['cells'][4:]:
-   if c['cell_type']=='code':exec(compile(''.join(c['source']),'delivered-template','exec'),lifecycle)
+  nb=package/filename;s=m.start(package,nb,'template_project','design_template_pipeline_v2',background=False,resource_root=res,run_label=' 模板验证 ')
+  lifecycle=dict(env, _feedback=s, _standalone_package=package)
+  for i in (6,8,9):exec(compile(''.join(n['cells'][i-1]['source']),'delivered-template','exec'),lifecycle)
+  gate=''.join(n['cells'][9]['source']).split('# TEMPLATE_INPUT_GATE_END')[0]
+  rejected(lambda:exec(compile(gate,'delivered-input-gate','exec'),lifecycle))
   root=s.root;assert root.parent==nb.parent and root.name.startswith('run_模板验证_')
-  state=json.loads((root/'monitor/session.json').read_text());assert state['status']=='NOT_RUN' and state['config']['pipeline_status']=='NOT_RUN'
+  state=json.loads((root/'monitor/session.json').read_text());assert state['status']=='NOT_RUN' and state['config']['pipeline_status']=='NOT_RUN' and state['config']['reason']=='TARGET_NOT_CONFIGURED'
   assert state['helix'] is None and state['binder_class'] is None
-  for path in ('main/rfd3','refine/rf3','rankings/main','reports/index.html','monitor/index.html','checkpoints/input/notebook.ipynb'):assert (root/path).exists()
+  for path in ('rankings/main','reports/index.html','monitor/index.html','checkpoints/input/notebook.ipynb'):assert (root/path).exists()
   assert 'NESPRIN · SPECTRIN REPEAT 56' not in (root/'reports/index.html').read_text()
   zipped=list((root/'feedback').glob('*.zip'));assert len(zipped)==1
   sys.path.insert(0,str(ROOT/'runtime'));import sr56_feedback as f
   one=zipped[0];assert f.verify_bundle(one)['computation_status']=='NOT_RUN'
   two=f.export_feedback(root);assert two!=one and one.is_file();f.verify_bundle(two)
   for z in (one,two):assert z.with_suffix('.zip.sha256').read_text()==f.digest(z)+'  '+z.name+'\n'
-  rid=state['run_id'];session=m.start(package,nb,'template_project','design_template_v1',str(root),True,False,res,run_label='显示信息')
-  assert session.run['run_id']==rid;session.configure(lifecycle['CONFIG'],lifecycle['TARGET'],'design_template_v1',root)
-  rejected(lambda:session.configure({'seed':123},lifecycle['TARGET'],'design_template_v1',root))
-  rejected(lambda:m.start(package,nb,'template_project','design_template_v1',str(root),True,False,res));session.close()
-  frozen=root/'checkpoints/input/notebook.ipynb';raw=frozen.read_bytes();bad=json.loads(raw);bad['cells'][5]['source'].append('\nPARAMETERS["seed"] = 2\n');frozen.write_text(json.dumps(bad));rejected(lambda:m.start(package,nb,'template_project','design_template_v1',str(root),True,False,res));frozen.write_bytes(raw)
-  rejected(lambda:m.start(package,nb,'template_project','design_template_v1',str(package),False,False,res))
+  # Filled science parameters are type-checked before dependency imports/RNG setup.
+  candidate=dict(lifecycle);valid_input=temp/'fake.cif';valid_input.write_text('input exists; parser not reached')
+  candidate['TARGET_STRUCTURE_FILE']=str(valid_input)
+  exec(compile(gate,'delivered-parameter-guard','exec'),candidate)
+  for name,value in (('random_seed',None),('random_seed',True),('random_seed',-1),('random_seed',2**32),('n_batches',True),('low_memory_mode','False'),('step_scale',float('nan'))):
+   invalid=dict(candidate);invalid[name]=value
+   rejected(lambda e=invalid:exec(compile(gate,'delivered-parameter-guard','exec'),e))
+  rejected(lambda:m.start(package,nb,'template_project','design_template_v1',str(root),True,False,res))
+  rid=state['run_id'];session=m.start(package,nb,'template_project','design_template_pipeline_v2',str(root),True,False,res,run_label='显示信息')
+  assert session.run['run_id']==rid;session.configure(state['config'],state['target'],'design_template_pipeline_v2',root)
+  rejected(lambda:session.configure({'seed':123},state['target'],'design_template_pipeline_v2',root))
+  rejected(lambda:m.start(package,nb,'template_project','design_template_pipeline_v2',str(root),True,False,res));session.close()
+  frozen=root/'checkpoints/input/notebook.ipynb';raw=frozen.read_bytes();bad=json.loads(raw);bad['cells'][8]['source'].append('\nrandom_seed = 2\n');frozen.write_text(json.dumps(bad));rejected(lambda:m.start(package,nb,'template_project','design_template_pipeline_v2',str(root),True,False,res));frozen.write_bytes(raw)
+  rejected(lambda:m.start(package,nb,'template_project','design_template_pipeline_v2',str(package),False,False,res))
   for label in ('../escape','a b','x'*41):rejected(lambda:m.normalize_run_label(label))
   assert m.normalize_run_label(' ' )=='未命名实验'
   merged=temp/'merged';f.merge_bundles([one,two],merged);assert len(f.read_json(merged/'merge_index.json')['imports'])==2
@@ -78,5 +97,5 @@ def run():
    assert subprocess.run(['git','check-ignore','-q','--no-index',path],cwd=d).returncode==0,path
   for path in ('runtime/sr56_feedback.py','template/resources.zip','examples/SR56/manifest.json','template/DesignProject/DesignProject.ipynb','tests/feedback_protocol.py'):
    assert subprocess.run(['git','check-ignore','-q','--no-index',path],cwd=d).returncode==1,path
- print('PASS: exact resources/pins; 7 notebooks;',compiled,'compiled code cells; source fingerprints; blank NOT_RUN lifecycle; strict resume and refusal; feedback trust boundaries; Git include/exclude. No GPU validation.')
+ print('PASS: exact resources/pins; 7 notebooks;',compiled,'compiled code cells; source fingerprints; unconfigured complete-pipeline NOT_RUN refusal; strict resume and refusal; feedback trust boundaries; Git include/exclude. No GPU validation.')
 if __name__=='__main__':run()
